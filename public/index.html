@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function saveTask(){
+            console.log('Heyyyyyyyyy')
+            final_list = document.getElementById("tasks")
+            inp = document.getElementById("task")
+
+            li = document.createElement("li")
+            li.textContent = inp.value
+
+            final_list.appendChild(li)
+            inp.value = ''
+
+
+        }
+    </script>
+</head>
+<body>
+    <label for="">Add a Task</label>
+    <input id = 'task' type="text" placeholder="Tell me Something">
+    <button onClick="saveTask()">Save</button>
+
+    <ul id="tasks"></ul>
+</body>
+</html>
